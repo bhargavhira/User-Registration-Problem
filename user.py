@@ -1,11 +1,11 @@
 password = input("Enter your password: ")
 
-digit_found = False
+special_chars = "@#$%^&*"
+special_count = 0
 for ch in password:
-    if ch >= "0" and ch <= "9":
-        digit_found = True
-        break
-if digit_found:
-    print("Rule3 passed: Password has at least one numeric digit.")
+    if ch in special_chars:
+        special_count = special_count + 1
+if special_count == 1:
+    print("Rule4 passed: Password has exactly one special character.")
 else:
-    print("Rule3 failed: Password must have at least one numeric digit.")
+    print("Rule4 failed: Password must have exactly one special character from [@, #, $, %, ^, &, *].")
