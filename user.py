@@ -1,11 +1,11 @@
 password = input("Enter your password: ")
 
-upper_found = False
+digit_found = False
 for ch in password:
-    if ch >= "A" and ch <= "Z":
-        upper_found = True
+    if ch >= "0" and ch <= "9":
+        digit_found = True
         break
-if upper_found:
-    print("Rule2 passed: Password has at least one uppercase letter.")
+if digit_found:
+    print("Rule3 passed: Password has at least one numeric digit.")
 else:
-    print("Rule2 failed: Password must have at least one uppercase letter.")
+    print("Rule3 failed: Password must have at least one numeric digit.")
