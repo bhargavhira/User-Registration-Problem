@@ -1,7 +1,11 @@
 password = input("Enter your password: ")
 
-# Use Case 1: Check for minimum 8 characters
-if len(password) >= 8:
-    print("Rule1 passed: Password has at least 8 characters.")
+upper_found = False
+for ch in password:
+    if ch >= "A" and ch <= "Z":
+        upper_found = True
+        break
+if upper_found:
+    print("Rule2 passed: Password has at least one uppercase letter.")
 else:
-    print("Rule1 failed: Password must be at least 8 characters.")
+    print("Rule2 failed: Password must have at least one uppercase letter.")
